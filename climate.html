@@ -3,24 +3,24 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 <title>Weather app- Easy tutorials</title>
-<link rel="stylesheet" href="style.css"></link>
+<link href="climate.css" rel="stylesheet">
 </head> 
 <body>
 <div class='card'>
 <div class='search'>
     <input type="text" placeholder="enter city name" spellcheck='false'></input>
-    <button><img src="search.png"></img></button>
+    <button><img src="file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/search.png"></img></button>
 </div>
 <div class='error'>
     <p>Invalid city name</p>
 </div>
 <div class="weather">
-    <img src="rain.png" class="weather-icon"></img>
+    <img src="file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/rain.png" class="weather-icon"></img>
     <h1 class="temp">22°c</h1>
     <h2 class="city">New York</h2>
     <div class="details">
         <div class="col">
-            <img src="humidity.png"></img>
+            <img src="file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/humidity.png"></img>
             <div>
                 <p class="humidity">50%</p>
                 <p>Humidity</p>
@@ -28,8 +28,9 @@
         </div>
         <div class="col">
         <div class="col">
-            <img src="wind.png"></img>
+            <img src="file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/wind.png"></img>
             <div>
+                
                 <p class="wind">15 km/h</p>
                 <p>wind speed</p>
             </div>
@@ -65,15 +66,15 @@ async function checkWeather(city){
     document.querySelector(".wind").innerHTML=data.wind.speed + "km/h";
 
     if (data.weather[0].main == "Clouds") {
-        weatherIcon.src = "/images/clouds.png";
+        weatherIcon.src = "file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/clouds.png";
     } else if (data.weather[0].main == "Clear") {
-        weatherIcon.src = "/images/clear.png";
+        weatherIcon.src = "file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/clear.png";
     } else if (data.weather[0].main == "Rain") {
-        weatherIcon.src = "/images/rain.png";
+        weatherIcon.src = "file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/rain.png";
     } else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "/images/drizzles.png";
+        weatherIcon.src = "file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/drizzles.png";
     } else if (data.weather[0].main == "Mist") {
-        weatherIcon.src = "/images/mist.png";
+        weatherIcon.src = "file:///Users/maaz/Documents/GitHub/learn-python-the-hard-way/%20weather%20app/images/mist.png";
     }
     document.querySelector(".weather").style.display="block";
     document.querySelector(".error").style.display="none";
