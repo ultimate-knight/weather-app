@@ -9,7 +9,7 @@
  }
  .card{
      width: 90%;
-     max-width: 470px;
+     max-width: 600px;
      background: linear-gradient(135deg, #00feba, #5b548a);
      color: #fff;
      margin: 100px auto 0;
@@ -36,6 +36,11 @@
      margin-right: 16px;
      font-size: 18px;
  }
+
+ .search input:hover {
+    background-color: #dbe7e5;
+ }
+
  .search button{
      border: 0;
      outline: 0;
@@ -44,6 +49,11 @@
      width: 60px;
      height: 60px;
      cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+ }
+ .search button:hover {
+    background-color: #dcfffa;
+    transform: scale(1.05);
  }
  .search button img{
      width: 16px;
@@ -90,4 +100,8 @@
      font-size: 14px;
      margin-top: 10px;
      display: none;
+ }
+ form {
+    width: 100%;
+    display: flex;
  }
